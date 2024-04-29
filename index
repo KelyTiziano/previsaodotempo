@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="script.js"></script>
+    <title>Previsão do tempo</title>
+</head>
+<body>
+    <div class="conteiner">
+        <input class="input-city" placeholder="Digite a cidade" style="color: aliceblue;">
+        <button id="search-button" class="button-source" onclick="cliqueNoBotao()">
+            <img class="img-source" alt="source" src="https://www.svgrepo.com/show/488200/find.svg">
+        </button>
+
+        <div class="box-media">
+            <h2 class="city"></h2>
+            <p class="temperatura"><b></b></p>
+
+            <div class="box-mini">
+                <img class="sun-icon" alt=""> <!-- Corrigido para uma imagem -->
+                <p class="texto-tempo"><span class="weather-text"><b></b></span></p>
+            </div>
+        </div>
+        <p class="umidade"><b></b></p>
+    </div>
+</body>
+</html>
