@@ -1,0 +1,34 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const key = "ac0507ccefc8d1943b9914dd88188279";
+
+    function dadosNaTela(dados) {
+      console.log(dados);
+      document.querySelector(".city").innerHTML = "Tempo em " + dados.name;
+      document.querySelector(".temperatura").innerHTML =
+        "Temperatura: " + Math.round(dados.main.temp) + "°C";
+      document.querySelector(".weather-text").innerHTML =
+        " " + dados.weather[0].description;
+      document.querySelector(".umidade").innerHTML =
+        "Umidade do ar: " + dados.main.humidity + "%";
+      document.querySelector(".sun-icon").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`;
+    }
+
+    function cliqueNoBotao() {
+      const city = document.querySelector(".input-city").value;
+      buscarCidade(city);
+    }
+
+    async function buscarCidade(city) {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`;
+      const dados = await fetch(url).then((response) => response.json());
+      dadosNaTela(dados);
+    }
+
+    document.querySelector(".input-city").addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          cliqueNoBotao();
+        }
+    });
+
+    document.getElementById("search-button").addEventListener("click", cliqueNoBotao);
+});
