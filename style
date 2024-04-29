@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* estilo de fonte google fonts */
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    max-width: 600px; /* Defina a largura máxima desejada para o corpo da página */
+    margin: 0 auto; /* Centralize o conteúdo na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* link para imagens aletorias de paisagens que vão mudando a cada atualização */
+    background-image: url(" https://source.unsplash.com/1600x900/?landscape");
+    background-size: cover; /* Garanta que a imagem de fundo cubra toda a área do corpo da página */
+}
+
+.conteiner {
+    background: rgba(255, 255, 255, 0.7); /* Use rgba para definir a opacidade de forma mais flexível */
+    border-radius: 25px;
+    padding: 20px;
+    max-width: 450px;
+}
+
+.input-city {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    background: rgba(107, 103, 103, 0.8); /* Cor de fundo mais escura */
+    color: #fff; /* Cor do texto dentro do campo de entrada */
+}
+
+.input-city::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Cor do texto do placeholder */
+}
+
+.img-source {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+
+.city {
+    font-size: 20px;
+    /* font-weight: 300; */
+    
+}
+
+.box-mini {
+    display: flex;
+    align-items: center;
+}
+
+.sun-icon {
+    font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+    margin-right: 5px; /* Adicione um espaçamento entre o ícone e o texto */
+}
+
+.weather-text {
+    margin: 0; /*Remova as margens padrão do parágrafo*/
+    text-transform: captalize;
+}
+.umidade {
+    font-size: 13px;
+}
+
+
+
+.button-source {
+     background: none;
+    border: none;
+    padding: 0;
+    margin-left: 10px; /* Adiciona um espaço entre o botão e o campo de entrada */
+     cursor: pointer;
+    margin-top: 15px; 
+}
